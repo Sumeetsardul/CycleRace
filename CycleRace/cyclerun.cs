@@ -11,12 +11,12 @@ namespace RacetrackSimulator
         public int Length;
         public PictureBox MyPictureBox = null;
 
-        public void StartlinePosition()
+        public void StartlinePosition()//this method is for the starting position
         {
             place = 0;
             MyPictureBox.Left = StartLine;
         }
-        public bool CycleRunning()
+        public bool CycleRunning()//this method is for moveing cycle 
         {
             var cycleing = Rand.Next(1, 22);
             place += cycleing;

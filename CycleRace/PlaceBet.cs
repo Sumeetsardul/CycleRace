@@ -7,7 +7,7 @@
         public int cycle;
         
 
-        public int CashOut(int winner)
+        public int CashOut(int winner)//this method updates the cash for the winner
         {
             if (cycle == winner)
             {
@@ -15,7 +15,7 @@
             }
             return cash * -1;
         }
-        public string Bets(Gamblers bettor)
+        public string Bets(Gamblers bettor)//this method checks if the user has placed a bet 
         {
             gamble = bettor;
             if (cash > 0)

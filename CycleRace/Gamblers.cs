@@ -12,7 +12,7 @@ namespace RacetrackSimulator
         public int Dollars;
 
 
-        public bool Gamble(int Amount, int WinnerCycle)
+        public bool Gamble(int Amount, int WinnerCycle)//this function send the value to 
         {
             GuyBet = new PlaceBet() { cash = Amount, gamble = this, cycle = WinnerCycle };
 
@@ -26,12 +26,12 @@ namespace RacetrackSimulator
             BetDisplay();
             return false;
         }
-        public void BetDisplay()
+        public void BetDisplay()// this method display the bet
         {
             MyLabel.Text = GuyBet.Bets(this);
             MyRadioButton.Text = $@"{Name} has ${Dollars} dollars";
         }
-        public void MoneyAdd(int winner)
+        public void MoneyAdd(int winner)//this method adds the money to winner
         {
             Dollars += GuyBet.CashOut(winner);
             Reset();
@@ -39,7 +39,7 @@ namespace RacetrackSimulator
         }
        
 
-        public void Reset()
+        public void Reset()//this is the reset method
         {
             GuyBet.cash = 0;
         }

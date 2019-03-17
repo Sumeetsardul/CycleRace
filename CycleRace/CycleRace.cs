@@ -42,14 +42,13 @@ namespace RacetrackSimulator
                 Rand = myRandom
             };
 
-            //Initialize all the guy objects
             gambler[0] = new Gamblers()
             {
                 Dollars = 50,
                 GuyBet = null,
                 MyLabel = SimerBetLabel,
                 MyRadioButton = SimerRadioButton,
-                Name = "Simer"
+                Name = "Simer"//this is the name of first bettor
             };
             gambler[1] = new Gamblers()
             {
@@ -57,7 +56,7 @@ namespace RacetrackSimulator
                 GuyBet = null,
                 MyLabel = GillBetLabel,
                 MyRadioButton = GillRadioButton,
-                Name = "Gill"
+                Name = "Gill"//this is the name of second bettor
             };
             gambler[2] = new Gamblers()
             {
@@ -65,7 +64,7 @@ namespace RacetrackSimulator
                 GuyBet = null,
                 MyLabel = MalkeetBetLabel,
                 MyRadioButton = MalkeetRadioButton,
-                Name = "Malkeet"
+                Name = "Malkeet"//this is the name of third bettor
             };
 
             foreach (Gamblers guy in gambler)
@@ -79,7 +78,7 @@ namespace RacetrackSimulator
 
         private void Start_Click(object sender, EventArgs e)
         {
-            timer1.Start();
+            timer1.Start();//this starts the timer
             gamble.Enabled = false;
         }
 
@@ -102,28 +101,28 @@ namespace RacetrackSimulator
         {
             if (gambler[0].MyRadioButton.Checked)
             {
-                if (gambler[0].Gamble((int)GambleAmt.Value, (int)WinnerCycle.Value))
+                if (gambler[0].Gamble((int)GambleAmt.Value, (int)WinnerCycle.Value))//this is calling the gamble method
                 {
-                    gambler[0].BetDisplay();
+                    gambler[0].BetDisplay();//this is calling the betdisplay method
                 }
             }
-            if (gambler[1].MyRadioButton.Checked)
+            if (gambler[1].MyRadioButton.Checked)//this is calling the gamble method
             {
                 if (gambler[1].Gamble((int)GambleAmt.Value, (int)WinnerCycle.Value))
                 {
-                    gambler[1].BetDisplay();
+                    gambler[1].BetDisplay();//this is calling the betdisplay method
                 }
             }
-            if (gambler[2].MyRadioButton.Checked)
+            if (gambler[2].MyRadioButton.Checked)//this is calling the gamble method
             {
                 if (gambler[2].Gamble((int)GambleAmt.Value, (int)WinnerCycle.Value))
                 {
-                    gambler[2].BetDisplay();
+                    gambler[2].BetDisplay();//this is calling the betdisplay method
                 }
             }
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void timer1_Tick(object sender, EventArgs e)//this the the timer
         {
             for (int i = 0; i < 4; i++)
             {
@@ -131,16 +130,16 @@ namespace RacetrackSimulator
                 {
                     var winner = i + 1;
                     timer1.Stop();
-                    MessageBox.Show($@"Cycleist number {winner} wins!", @"The Winner is");
+                    MessageBox.Show($@"Cycleist number {winner} wins!", @"The Winner is");//this is for the meesage pop up 
 
                     foreach (Gamblers guy in gambler)
                     {
-                        guy.MoneyAdd(winner);
+                        guy.MoneyAdd(winner);//his is calling the Moneyadd method
                     }
 
                     foreach (CycleRun cycle in cycleist)
                     {
-                        cycle.StartlinePosition();
+                        cycle.StartlinePosition();//his is calling the StartlinePositio method
                     }
 
                     gamble.Enabled = true;
