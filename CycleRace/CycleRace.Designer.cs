@@ -195,7 +195,7 @@
             // 
             // PlaceBet
             // 
-            this.PlaceBet.Location = new System.Drawing.Point(428, 41);
+            this.PlaceBet.Location = new System.Drawing.Point(432, 44);
             this.PlaceBet.Margin = new System.Windows.Forms.Padding(2);
             this.PlaceBet.Name = "PlaceBet";
             this.PlaceBet.Size = new System.Drawing.Size(56, 27);
@@ -324,7 +324,7 @@
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
-            // Form1
+            // CycleRace
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -341,7 +341,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "CycleRace";
             this.Text = "CycleRace";
             this.gamble.ResumeLayout(false);
             this.gamble.PerformLayout();
